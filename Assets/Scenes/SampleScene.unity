@@ -394,16 +394,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bddb01708d4473439ef94a633778d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpTime: 0
-  jumpForce: 7
-  FallMultiplayer: 1.2
-  JumpMultiplayer: 0
-  grounded: 1
-  vecGravity: {x: 0, y: 0}
-  playerBody: {fileID: 0}
-  MyAnim: {fileID: 0}
-  isJumping: 0
-  jumpCounter: 0
 --- !u!95 &359968114
 Animator:
   serializedVersion: 5
