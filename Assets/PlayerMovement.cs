@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space) && grounded){
             //player jumps
-            MyAnim.SetTrigger("Jump");
+            MyAnim.SetTrigger("NewJump");
             MyAnim.SetBool("Jumping", true);
             playerBody.velocity = new Vector2(playerBody.velocity.x, jumpForce);
             isJumping = true;
