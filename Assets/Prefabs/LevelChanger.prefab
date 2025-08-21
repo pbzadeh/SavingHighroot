@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 7131816867677990223}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6, y: -3.46, z: 0.0015171766}
+  m_LocalPosition: {x: -6.4, y: -0.8, z: 0.0015171766}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _connection: {fileID: 11400000, guid: 3e74d1340a5285b4e99afea9c509d87d, type: 2}
   _targetscene: level1
-  _spawnpoint: {fileID: 0}
+  _spawnpoint: {fileID: 7715318768444498677}
 --- !u!61 &6872975278403640329
 BoxCollider2D:
   m_ObjectHideFlags: 0

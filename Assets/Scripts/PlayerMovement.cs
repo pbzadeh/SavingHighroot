@@ -156,15 +156,9 @@ public class PlayerMovement : MonoBehaviour
         {
             grounded = false;
             Debug.Log("UnGrounded");
-        }
+        }   
     }
-    public CoinManager cm;
-    void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.CompareTag("Coin")){
-            Destroy(other.gameObject);
-            cm.coincount ++;
-        }
-    }
+    
 
     
 

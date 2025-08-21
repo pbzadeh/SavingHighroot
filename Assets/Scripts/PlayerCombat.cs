@@ -18,7 +18,7 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         if(Time.time >= nextattackTime){
-            if (Input.GetMouseButton(0)){
+            if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.X)){
                 Attack();
                 nextattackTime = Time.time + 1f / attackRate;
             }
@@ -32,7 +32,20 @@ public class PlayerCombat : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach(Collider2D enemy in hitEnemies){
-            enemy.GetComponent<Enemy>().takeDmg(attackdmg);
+            Enemy enemyScript = enemy.GetComponent<Enemy>();
+            if(enemyScript != null) {
+                enemyScript.takeDmg(attackdmg);
+                continue;
+            }
+            Slime slimeScript = enemy.GetComponent<Slime>();
+            if(slimeScript != null) {
+                slimeScript.takeDmg(attackdmg);
+            }
+            Skeleton skeletScript = enemy.GetComponent<Skeleton>();
+            if(skeletScript != null) {
+                skeletScript.takeDmg(attackdmg);
+                continue;
+            }
         }
         //
     }
