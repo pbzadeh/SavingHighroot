@@ -19,7 +19,7 @@ public class Skeleton : MonoBehaviour
 
     public void takeDmg(int dmg){
         currHealth -= dmg;
-        AudioManager.Instance.PlaySFX("SlimeHurt");
+        AudioManager.Instance.PlaySFX("SkeletHurt");
         skelAnim.SetTrigger("skeletHurt");
         
         if(currHealth <= 0){
@@ -32,7 +32,7 @@ public class Skeleton : MonoBehaviour
         Debug.Log("enemy died");
         skelAnim.SetTrigger("skeletDeath");
         //
-        AudioManager.Instance.PlaySFX("SlimeDeath");
+        AudioManager.Instance.PlaySFX("SkeletHurt");
         
         //
         GetComponent<Collider2D>().enabled = false;

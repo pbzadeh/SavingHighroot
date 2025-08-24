@@ -39,7 +39,7 @@ public class dialoguetrigger : MonoBehaviour
              AudioManager.Instance.PlaySFX("OldYawn");
                 diabox.SetActive(false);
                  // O\tionally close on exit
-                 Destroy(gameObject);
+                 
         }
     }
 }

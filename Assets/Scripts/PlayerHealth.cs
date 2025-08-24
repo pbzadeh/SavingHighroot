@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public Animator anim;
-    public int maxHealthPlayer = 50;
+    public int maxHealthPlayer = 70;
     public int health;
     public Image healthBar;
     public float nextHealTime = 0f;
@@ -20,17 +20,17 @@ public class PlayerHealth : MonoBehaviour
 
     void Update(){
         if(Time.time >= nextHealTime){
-            if (Input.GetKeyDown(KeyCode.G)){
-                HealPlayer(5);
+            if (Input.GetKeyDown(KeyCode.F)){
+                HealPlayer(15);
                 nextHealTime = Time.time + 1f / 0.25f;
             }
         }
     }
     /* public void TakeDamagePlayer(int damage){
         health -= damage;
-        AudioManager.Instance.PlaySFX("PlayerHurt");
+        AudioManager.instance.PlaySFX("PlayerHurt");
         if(health <= 0){
-            AudioManager.Instance.PlaySFX("PlayerDeath");
+            AudioManager.instance.PlaySFX("PlayerDeath");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         healthBar.fillAmount = (float)health / maxHealthPlayer;
@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
         rb.AddForce(knockbackDirection.normalized * knockbackForce, ForceMode2D.Impulse);
         if(health <= 0){
             AudioManager.Instance.PlaySFX("PlayerDeath");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("Menu");
         }
         
         healthBar.fillAmount = (float)health / maxHealthPlayer;

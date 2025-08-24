@@ -33,5 +33,6 @@ public class Slime : MonoBehaviour
         //
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+        
     }
 }

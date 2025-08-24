@@ -6,17 +6,14 @@ public class keyDialougeTrigger : MonoBehaviour
 {
     public GameObject diabox;
     private int talkcnt = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
         diabox.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         
@@ -26,6 +23,7 @@ public class keyDialougeTrigger : MonoBehaviour
             AudioManager.Instance.PlaySFX("KeyEnter");
             diabox.SetActive(true);
             talkcnt ++;
+            
         }
 
     }

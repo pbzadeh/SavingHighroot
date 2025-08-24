@@ -46,6 +46,16 @@ public class PlayerCombat : MonoBehaviour
                 skeletScript.takeDmg(attackdmg);
                 continue;
             }
+            Dragon dragonscript = enemy.GetComponent<Dragon>();
+            if(dragonscript != null) {
+                dragonscript.takeDmg(attackdmg);
+                continue;
+            }
+            Tree treescript = enemy.GetComponent<Tree>();
+            if(treescript != null) {
+                treescript.takeDmg(10);
+                continue;
+            }
         }
         //
     }
